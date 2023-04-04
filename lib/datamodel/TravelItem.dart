@@ -1,4 +1,4 @@
-class TravelDataModel {
+class TravelItem {
   String? _image, _title, _location, _description;
   double? _distance, _temp, _rating, _price;
 
