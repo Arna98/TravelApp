@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:expandable_text/expandable_text.dart';
-
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(TravelInfo());
@@ -42,6 +43,15 @@ class TravelInfoHome extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Container(
+                    width: 87,
+                    height: 87,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color:Color.fromRGBO(0, 0, 0, 0.2)),
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: const Center(child: Text("its a sample")),
+                  ),
                   Card(
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -54,7 +64,8 @@ class TravelInfoHome extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [Text("Distance"), Text("13Km")],
                         )),
-                  ),Card(
+                  ),
+                  Card(
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                         side: BorderSide(
@@ -66,7 +77,8 @@ class TravelInfoHome extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [Text("Temp"), Text("19\u2103")],
                         )),
-                  ),Card(
+                  ),
+                  Card(
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                         side: BorderSide(
@@ -83,7 +95,7 @@ class TravelInfoHome extends StatelessWidget {
               ),
               //design description
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 16, 30, 8),
+                padding: const EdgeInsets.fromLTRB(30, 16, 30, 32),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
@@ -94,7 +106,39 @@ class TravelInfoHome extends StatelessWidget {
                       expandText: "Read More",
                       collapseText: "Show Less",
                       maxLines: 3,
-                      )
+                    )
+                  ],
+                ),
+              ),
+              //design price & button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    //price
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text("Total Price"),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text("\$23123")
+                      ],
+                    ),
+                    //button
+                    Container(
+                      width: 85,
+                      height: 85,
+                      decoration: const BoxDecoration(
+                          color: Colors.black, shape: BoxShape.circle),
+                      child: IconButton(
+                          icon: const Icon(CupertinoIcons.arrow_right),
+                          color: Colors.white,
+                          onPressed: () {},
+                          iconSize: 35),
+                    )
                   ],
                 ),
               )
