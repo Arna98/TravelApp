@@ -43,6 +43,7 @@ class TravelInfoHome extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  /* The container can be used instead of the card as follows:
                   Container(
                     width: 87,
                     height: 87,
@@ -51,7 +52,7 @@ class TravelInfoHome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20)
                     ),
                     child: const Center(child: Text("its a sample")),
-                  ),
+                  ), */
                   Card(
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
