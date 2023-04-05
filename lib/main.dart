@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:expandable_text/expandable_text.dart';
+
 
 void main() {
   runApp(TravelInfo());
@@ -79,6 +81,23 @@ class TravelInfoHome extends StatelessWidget {
                   ),
                 ],
               ),
+              //design description
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 16, 30, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text("Description"),
+                    SizedBox(height: 8),
+                    ExpandableText(
+                      "data  datadata data datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata",
+                      expandText: "Read More",
+                      collapseText: "Show Less",
+                      maxLines: 3,
+                      )
+                  ],
+                ),
+              )
             ]),
           ),
         )
