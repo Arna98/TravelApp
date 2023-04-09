@@ -32,6 +32,60 @@ class TravelInfoHome extends StatelessWidget {
           width: double.infinity,
           height: size.height / 1.8,
           color: Colors.red,
+          child: Stack(
+            children: [
+              //image view
+              Container(
+                width: double.infinity,
+                height: 385,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(85),
+                      bottomRight: Radius.circular(85)),
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/sky.jpg"),
+                        fit: BoxFit.fitHeight
+                        )
+                ),
+              ),
+              //buttons
+              Positioned(
+                top: 24,
+                right: 24,
+                left: 24,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    //back button
+                    Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromRGBO(255, 255, 255, 0.5)),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(CupertinoIcons.back,
+                              color: Colors.black)),
+                    ),
+                    //like buuton
+                    Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromRGBO(255, 255, 255, 0.5)),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(CupertinoIcons.heart,
+                              color: Colors.black)),
+                    )
+                  ],
+                ),
+              ),
+              
+            ],
+          ),
         ),
         //part 2
         Expanded(
