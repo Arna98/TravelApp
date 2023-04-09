@@ -5,7 +5,7 @@ class DataGenerator{
     List<TravelItem> travelItems = [];
 
     TravelItem travelItem = TravelItem();
-    travelItem.setImage = "assets/images/sky";
+    travelItem.setImage = "assets/images/sky.jpg";
     travelItem.setTitle = "sky";
     travelItem.setLocation = "Lorem, ipsum 01";
     travelItem.setDistance = 47;
@@ -24,7 +24,7 @@ class DataGenerator{
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
-    travelItem.setImage = "assets/images/bird";
+    travelItem.setImage = "assets/images/bird.jpg";
     travelItem.setTitle = "bird";
     travelItem.setLocation = "Lorem, ipsum 02";
     travelItem.setDistance = 66;
@@ -43,7 +43,7 @@ class DataGenerator{
     travelItems.add(travelItem);
     
     travelItem = TravelItem();
-    travelItem.setImage = "assets/images/space";
+    travelItem.setImage = "assets/images/space.jpg";
     travelItem.setTitle = "spcace";
     travelItem.setLocation = "Lorem, ipsum 03";
     travelItem.setDistance = 234;
@@ -62,7 +62,7 @@ class DataGenerator{
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
-    travelItem.setImage = "assets/images/tiger";
+    travelItem.setImage = "assets/images/tiger.jpg";
     travelItem.setTitle = "tiger";
     travelItem.setLocation = "Lorem, ipsum 04";
     travelItem.setDistance = 634;
@@ -81,7 +81,7 @@ class DataGenerator{
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
-    travelItem.setImage = "assets/images/tree";
+    travelItem.setImage = "assets/images/tree.jpg";
     travelItem.setTitle = "tree";
     travelItem.setLocation = "Lorem, ipsum 05";
     travelItem.setDistance = 345;
