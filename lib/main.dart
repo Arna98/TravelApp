@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/services.dart';
+import 'package:travelapp/DataGenerator.dart';
+import 'package:travelapp/datamodel/TravelItem.dart';
 
 void main() {
   runApp(TravelInfo());
@@ -27,11 +29,12 @@ class TravelInfoHome extends StatefulWidget {
 }
 
 class _TravelInfoHomeState extends State<TravelInfoHome> {
-
+  int _selcetedIndex = 0;
+  List<TravelItem> _travelItems = DataGenerator.getTravelItems();
   @override
   void initState() {
-      super.initState();
-      SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
   }
 
   @override
@@ -52,14 +55,12 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                   width: double.infinity,
                   height: 385,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(85),
-                        bottomRight: Radius.circular(85)),
-                        image: DecorationImage(
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(85),
+                          bottomRight: Radius.circular(85)),
+                      image: DecorationImage(
                           image: AssetImage("assets/images/sky.jpg"),
-                          fit: BoxFit.fitHeight
-                          )
-                  ),
+                          fit: BoxFit.fitHeight)),
                 ),
                 //buttons
                 Positioned(
@@ -96,7 +97,24 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                     ],
                   ),
                 ),
-                
+                //title and location
+                Positioned(
+                    left: 30,
+                    bottom: 135,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(_travelItems[_selcetedIndex].getTitle!,
+                            style: TextStyle(color: Colors.white)),
+                        Row(
+                          children: [
+                            Icon(CupertinoIcons.location_fill, color: Colors.white),
+                            Text(_travelItems[_selcetedIndex].getLocation!,
+                                style: TextStyle(color: Colors.white))
+                          ],
+                        )
+                      ],
+                    ))
               ],
             ),
           ),
