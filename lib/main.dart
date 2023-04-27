@@ -56,12 +56,12 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                 Container(
                   width: double.infinity,
                   height: 385,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(85),
                           bottomRight: Radius.circular(85)),
                       image: DecorationImage(
-                          image: AssetImage("assets/images/sky.jpg"),
+                          image: AssetImage(_travelItems[_selcetedIndex].getImage!),
                           fit: BoxFit.fitHeight)),
                 ),
                 //buttons
