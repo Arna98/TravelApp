@@ -30,7 +30,9 @@ class TravelInfoHome extends StatefulWidget {
 
 class _TravelInfoHomeState extends State<TravelInfoHome> {
   int _selcetedIndex = 0;
+  double? _sizeImage = 55;
   List<TravelItem> _travelItems = DataGenerator.getTravelItems();
+
   @override
   void initState() {
     super.initState();
@@ -108,13 +110,44 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                             style: TextStyle(color: Colors.white)),
                         Row(
                           children: [
-                            Icon(CupertinoIcons.location_fill, color: Colors.white),
+                            Icon(CupertinoIcons.location_fill,
+                                color: Colors.white),
                             Text(_travelItems[_selcetedIndex].getLocation!,
                                 style: TextStyle(color: Colors.white))
                           ],
                         )
                       ],
-                    ))
+                    )),
+                //listView Items
+                Positioned(
+                    child: ListView.builder(
+                  itemCount: _travelItems.length,
+                  itemBuilder: (context, index) {
+                    return Column(children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          onTap: () {},
+                          child: AnimatedContainer(
+                            width: _sizeImage,
+                            height: _sizeImage,
+                            duration: const Duration(milliseconds: 500),
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.white, width: 2),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(10)),
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        _travelItems[index].getImage!),
+                                    fit: BoxFit.fill)),
+                          ),
+                        ),
+                      ),
+                    ]);
+                  },
+                ))
               ],
             ),
           ),
