@@ -49,7 +49,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
           Container(
             width: double.infinity,
             height: size.height / 1.8,
-            color: Colors.red,
+            color: Colors.white,
             child: Stack(
               children: [
                 //image view
