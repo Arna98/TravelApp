@@ -185,7 +185,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [Text("Distance"), Text("13Km")],
+                            children: [const Text("Distance"), Text("${_travelItems[_selcetedIndex].getDistance}km")],
                           )),
                     ),
                     Card(
@@ -198,7 +198,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [Text("Temp"), Text("19\u2103")],
+                            children: [const Text("Temp"), Text("${_travelItems[_selcetedIndex].getTemp}\u2103")],
                           )),
                     ),
                     Card(
@@ -211,7 +211,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [Text("Rating"), Text("4.8")],
+                            children: [const Text("Rating"), Text("${_travelItems[_selcetedIndex].getRating}")],
                           )),
                     ),
                   ],
@@ -221,11 +221,11 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                   padding: const EdgeInsets.fromLTRB(30, 16, 30, 32),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text("Description"),
-                      SizedBox(height: 8),
+                    children: [
+                      const Text("Description"),
+                      const SizedBox(height: 8),
                       ExpandableText(
-                        "data  datadata data datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata",
+                        "${_travelItems[_selcetedIndex].getDescription}",
                         expandText: "Read More",
                         collapseText: "Show Less",
                         maxLines: 3,
@@ -242,12 +242,12 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                       //price
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text("Total Price"),
-                          SizedBox(
+                        children: [
+                          const Text("Total Price"),
+                          const SizedBox(
                             height: 8,
                           ),
-                          Text("\$23123")
+                          Text("\$${_travelItems[_selcetedIndex].getPrice}")
                         ],
                       ),
                       //button
