@@ -61,7 +61,8 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           bottomLeft: Radius.circular(85),
                           bottomRight: Radius.circular(85)),
                       image: DecorationImage(
-                          image: AssetImage(_travelItems[_selcetedIndex].getImage!),
+                          image: AssetImage(
+                              _travelItems[_selcetedIndex].getImage!),
                           fit: BoxFit.fitHeight)),
                 ),
                 //buttons
@@ -101,9 +102,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                 ),
                 //title and location
                 Positioned(
-                  left: 30,
-                  bottom: 135,
-                  child: Column(
+                    left: 30,
+                    bottom: 135,
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(_travelItems[_selcetedIndex].getTitle!,
@@ -120,44 +121,18 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                     )),
                 //listView Items
                 Positioned(
-                  right: 0,
-                  top: 80,
-                  child: SizedBox(
-                    width: 90,
-                    height: double.maxFinite,
-                    child: ListView.builder(
-                    itemCount: _travelItems.length,
-                    itemBuilder: (context, index) {
-                      return Column(children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            onTap: () {
-                              setState(() {
-                                _selcetedIndex = index;
-                              });
-                            },
-                            child: AnimatedContainer(
-                              width: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
-                              height: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
-                              duration: const Duration(milliseconds: 500),
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 2),
-                                  borderRadius:
-                                      const BorderRadius.all(Radius.circular(10)),
-                                  shape: BoxShape.rectangle,
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          _travelItems[index].getImage!),
-                                      fit: BoxFit.fill)),
-                            ),
-                          ),
-                        ),
-                      ]);
-                    },
-                                  ),
-                  ))
+                    right: 0,
+                    top: 80,
+                    child: SizedBox(
+                      width: 90,
+                      height: double.maxFinite,
+                      child: ListView.builder(
+                        itemCount: _travelItems.length,
+                        itemBuilder: (context, index) {
+                          return imageItem(index);
+                        },
+                      ),
+                    ))
               ],
             ),
           ),
@@ -191,7 +166,11 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [const Text("Distance"), Text("${_travelItems[_selcetedIndex].getDistance}km")],
+                            children: [
+                              const Text("Distance"),
+                              Text(
+                                  "${_travelItems[_selcetedIndex].getDistance}km")
+                            ],
                           )),
                     ),
                     Card(
@@ -204,7 +183,11 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [const Text("Temp"), Text("${_travelItems[_selcetedIndex].getTemp}\u2103")],
+                            children: [
+                              const Text("Temp"),
+                              Text(
+                                  "${_travelItems[_selcetedIndex].getTemp}\u2103")
+                            ],
                           )),
                     ),
                     Card(
@@ -217,7 +200,10 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           height: 87,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [const Text("Rating"), Text("${_travelItems[_selcetedIndex].getRating}")],
+                            children: [
+                              const Text("Rating"),
+                              Text("${_travelItems[_selcetedIndex].getRating}")
+                            ],
                           )),
                     ),
                   ],
@@ -277,5 +263,32 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
         ]),
       ),
     );
+  }
+
+  Widget imageItem(int index) {
+    return Column(children: [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: InkWell(
+          onTap: () {
+            setState(() {
+              _selcetedIndex = index;
+            });
+          },
+          child: AnimatedContainer(
+            width: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
+            height: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
+            duration: const Duration(milliseconds: 500),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.white, width: 3),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                shape: BoxShape.rectangle,
+                image: DecorationImage(
+                    image: AssetImage(_travelItems[index].getImage!),
+                    fit: BoxFit.fill)),
+          ),
+        ),
+      ),
+    ]);
   }
 }
