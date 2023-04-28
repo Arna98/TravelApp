@@ -20,7 +20,7 @@ class DataGenerator{
 
     Aenean sed adipiscing diam donec. Ut sem nulla pharetra diam. Penatibus et magnis dis parturient. Ornare suspendisse sed nisi lacus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi scelerisque eu ultrices. Aliquet eget sit amet tellus cras adipiscing enim eu. Gravida dictum fusce ut placerat orci. Odio facilisis mauris sit amet massa. Sodales neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Nisl suscipit adipiscing bibendum est ultricies. Egestas congue quisque egestas diam in arcu cursus. Malesuada pellentesque elit eget gravida cum sociis. Lacus vestibulum sed arcu non. Hac habitasse platea dictumst vestibulum. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Morbi tristique senectus et netus et malesuada fames.
     """;
-    travelItem.setPrice = 12324;
+    travelItem.setPrice = 13554;
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
@@ -39,7 +39,7 @@ class DataGenerator{
 
     Aenean sed adipiscing diam donec. Ut sem nulla pharetra diam. Penatibus et magnis dis parturient. Ornare suspendisse sed nisi lacus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi scelerisque eu ultrices. Aliquet eget sit amet tellus cras adipiscing enim eu. Gravida dictum fusce ut placerat orci. Odio facilisis mauris sit amet massa. Sodales neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Nisl suscipit adipiscing bibendum est ultricies. Egestas congue quisque egestas diam in arcu cursus. Malesuada pellentesque elit eget gravida cum sociis. Lacus vestibulum sed arcu non. Hac habitasse platea dictumst vestibulum. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Morbi tristique senectus et netus et malesuada fames.
     """;
-    travelItem.setPrice = 12324;
+    travelItem.setPrice = 8324;
     travelItems.add(travelItem);
     
     travelItem = TravelItem();
@@ -58,7 +58,7 @@ class DataGenerator{
 
     Aenean sed adipiscing diam donec. Ut sem nulla pharetra diam. Penatibus et magnis dis parturient. Ornare suspendisse sed nisi lacus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi scelerisque eu ultrices. Aliquet eget sit amet tellus cras adipiscing enim eu. Gravida dictum fusce ut placerat orci. Odio facilisis mauris sit amet massa. Sodales neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Nisl suscipit adipiscing bibendum est ultricies. Egestas congue quisque egestas diam in arcu cursus. Malesuada pellentesque elit eget gravida cum sociis. Lacus vestibulum sed arcu non. Hac habitasse platea dictumst vestibulum. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Morbi tristique senectus et netus et malesuada fames.
     """;
-    travelItem.setPrice = 12324;
+    travelItem.setPrice = 456324;
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
@@ -77,7 +77,7 @@ class DataGenerator{
 
     Aenean sed adipiscing diam donec. Ut sem nulla pharetra diam. Penatibus et magnis dis parturient. Ornare suspendisse sed nisi lacus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi scelerisque eu ultrices. Aliquet eget sit amet tellus cras adipiscing enim eu. Gravida dictum fusce ut placerat orci. Odio facilisis mauris sit amet massa. Sodales neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Nisl suscipit adipiscing bibendum est ultricies. Egestas congue quisque egestas diam in arcu cursus. Malesuada pellentesque elit eget gravida cum sociis. Lacus vestibulum sed arcu non. Hac habitasse platea dictumst vestibulum. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Morbi tristique senectus et netus et malesuada fames.
     """;
-    travelItem.setPrice = 12324;
+    travelItem.setPrice = 625464;
     travelItems.add(travelItem);
 
     travelItem = TravelItem();
@@ -96,7 +96,7 @@ class DataGenerator{
 
     Aenean sed adipiscing diam donec. Ut sem nulla pharetra diam. Penatibus et magnis dis parturient. Ornare suspendisse sed nisi lacus. Facilisi nullam vehicula ipsum a arcu cursus vitae. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi scelerisque eu ultrices. Aliquet eget sit amet tellus cras adipiscing enim eu. Gravida dictum fusce ut placerat orci. Odio facilisis mauris sit amet massa. Sodales neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Nisl suscipit adipiscing bibendum est ultricies. Egestas congue quisque egestas diam in arcu cursus. Malesuada pellentesque elit eget gravida cum sociis. Lacus vestibulum sed arcu non. Hac habitasse platea dictumst vestibulum. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Morbi tristique senectus et netus et malesuada fames.
     """;
-    travelItem.setPrice = 12324;
+    travelItem.setPrice = 123;
     travelItems.add(travelItem);
 
     return travelItems;
