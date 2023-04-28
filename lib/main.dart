@@ -120,38 +120,44 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                     )),
                 //listView Items
                 Positioned(
+                  right: 0,
+                  top: 80,
+                  child: SizedBox(
+                    width: 90,
+                    height: double.maxFinite,
                     child: ListView.builder(
-                  itemCount: _travelItems.length,
-                  itemBuilder: (context, index) {
-                    return Column(children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: InkWell(
-                          onTap: () {
-                            setState(() {
-                              _selcetedIndex = index;
-                            });
-                          },
-                          child: AnimatedContainer(
-                            width: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
-                            height: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
-                            duration: const Duration(milliseconds: 500),
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 2),
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(10)),
-                                shape: BoxShape.rectangle,
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        _travelItems[index].getImage!),
-                                    fit: BoxFit.fill)),
+                    itemCount: _travelItems.length,
+                    itemBuilder: (context, index) {
+                      return Column(children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: InkWell(
+                            onTap: () {
+                              setState(() {
+                                _selcetedIndex = index;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              width: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
+                              height: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
+                              duration: const Duration(milliseconds: 500),
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.white, width: 2),
+                                  borderRadius:
+                                      const BorderRadius.all(Radius.circular(10)),
+                                  shape: BoxShape.rectangle,
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          _travelItems[index].getImage!),
+                                      fit: BoxFit.fill)),
+                            ),
                           ),
                         ),
-                      ),
-                    ]);
-                  },
-                ))
+                      ]);
+                    },
+                                  ),
+                  ))
               ],
             ),
           ),
