@@ -101,9 +101,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                 ),
                 //title and location
                 Positioned(
-                    left: 30,
-                    bottom: 135,
-                    child: Column(
+                  left: 30,
+                  bottom: 135,
+                  child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(_travelItems[_selcetedIndex].getTitle!,
@@ -127,10 +127,14 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            setState(() {
+                              _selcetedIndex = index;
+                            });
+                          },
                           child: AnimatedContainer(
-                            width: _sizeImage,
-                            height: _sizeImage,
+                            width: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
+                            height: _selcetedIndex == index ? _sizeImage! + 15 : _sizeImage,
                             duration: const Duration(milliseconds: 500),
                             decoration: BoxDecoration(
                                 border:
