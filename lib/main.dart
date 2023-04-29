@@ -160,7 +160,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           Row(
                             children: [
                              const  Icon(CupertinoIcons.placemark_fill,
-                                  color: Colors.white),
+                                  color: Colors.white, size: 11),
                               Text(_travelItems[_selcetedIndex].getLocation!,
                                   style: Theme.of(context).textTheme.bodyMedium)
                             ],
