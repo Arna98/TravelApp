@@ -43,6 +43,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
