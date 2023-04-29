@@ -18,43 +18,43 @@ class TravelInfo extends StatelessWidget {
         textTheme: const TextTheme(
           headlineLarge: TextStyle(
             color: Colors.white,
-            fontSize: 70,
+            fontSize: 26,
             fontFamily: "poppins",
             fontWeight: FontWeight.w300
           ),
           headlineMedium: TextStyle(
             color: Colors.black,
-            fontSize: 40,
+            fontSize: 14,
             fontFamily: "poppins",
             fontWeight: FontWeight.w500
           ),
           headlineSmall: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 12,
             fontFamily: "poppins",
             fontWeight: FontWeight.w300
           ) ,
           bodyLarge: TextStyle(
             color: Colors.black,
-            fontSize: 80,
+            fontSize: 30,
             fontFamily: "poppins",
             fontWeight: FontWeight.w700
           ),
           bodyMedium: TextStyle(
             color: Colors.white,
-            fontSize: 36,
+            fontSize: 13,
             fontFamily: "poppins",
             fontWeight: FontWeight.w300
           ),
           bodySmall: TextStyle(
             color: Colors.black,
-            fontSize: 27,
+            fontSize: 11,
             fontFamily: "poppins",
             fontWeight: FontWeight.w300
           ),
           displayMedium: TextStyle(
             color: Color.fromARGB(255, 120, 202, 222),
-            fontSize: 50,
+            fontSize: 19,
             fontFamily: "poppins",
             fontWeight: FontWeight.w500
           )
@@ -284,7 +284,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Total Price", style: Theme.of(context).textTheme.bodyMedium),
+                          Text("Total Price", style: Theme.of(context).textTheme.headlineMedium),
                           const SizedBox(
                             height: 8,
                           ),
