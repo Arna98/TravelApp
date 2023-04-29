@@ -44,101 +44,101 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
-        child: Column(children: [
-          //part 1
-          Container(
-            width: double.infinity,
-            height: size.height / 1.8,
-            color: Colors.white,
-            child: Stack(
-              children: [
-                //image view
-                Container(
-                  width: double.infinity,
-                  height: 385,
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(85),
-                          bottomRight: Radius.circular(85)),
-                      image: DecorationImage(
-                          image: AssetImage(
-                              _travelItems[_selcetedIndex].getImage!),
-                          fit: BoxFit.fitHeight)),
-                ),
-                //buttons
-                Positioned(
-                  top: 24,
-                  right: 24,
-                  left: 24,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //back button
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color.fromRGBO(255, 255, 255, 0.5)),
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(CupertinoIcons.back,
-                                color: Colors.black)),
-                      ),
-                      //like buuton
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color.fromRGBO(255, 255, 255, 0.5)),
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(CupertinoIcons.heart,
-                                color: Colors.black)),
-                      )
-                    ],
+        child: SingleChildScrollView(
+          child: Column(children: [
+            //part 1
+            Container(
+              width: double.infinity,
+              height: size.height / 1.8,
+              color: Colors.white,
+              child: Stack(
+                children: [
+                  //image view
+                  Container(
+                    width: double.infinity,
+                    height: 385,
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(85),
+                            bottomRight: Radius.circular(85)),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                _travelItems[_selcetedIndex].getImage!),
+                            fit: BoxFit.fitHeight)),
                   ),
-                ),
-                //title and location
-                Positioned(
-                    left: 30,
-                    bottom: 135,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  //buttons
+                  Positioned(
+                    top: 24,
+                    right: 24,
+                    left: 24,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(_travelItems[_selcetedIndex].getTitle!,
-                            style: TextStyle(color: Colors.white)),
-                        Row(
-                          children: [
-                            Icon(CupertinoIcons.location_fill,
-                                color: Colors.white),
-                            Text(_travelItems[_selcetedIndex].getLocation!,
-                                style: TextStyle(color: Colors.white))
-                          ],
+                        //back button
+                        Container(
+                          width: 45,
+                          height: 45,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromRGBO(255, 255, 255, 0.5)),
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(CupertinoIcons.back,
+                                  color: Colors.black)),
+                        ),
+                        //like buuton
+                        Container(
+                          width: 45,
+                          height: 45,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromRGBO(255, 255, 255, 0.5)),
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(CupertinoIcons.heart,
+                                  color: Colors.black)),
                         )
                       ],
-                    )),
-                //listView Items
-                Positioned(
-                    right: 0,
-                    top: 80,
-                    child: SizedBox(
-                      width: 90,
-                      height: double.maxFinite,
-                      child: ListView.builder(
-                        itemCount: _travelItems.length,
-                        itemBuilder: (context, index) {
-                          return imageItem(index);
-                        },
-                      ),
-                    ))
-              ],
+                    ),
+                  ),
+                  //title and location
+                  Positioned(
+                      left: 30,
+                      bottom: 135,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(_travelItems[_selcetedIndex].getTitle!,
+                              style: TextStyle(color: Colors.white)),
+                          Row(
+                            children: [
+                              Icon(CupertinoIcons.location_fill,
+                                  color: Colors.white),
+                              Text(_travelItems[_selcetedIndex].getLocation!,
+                                  style: TextStyle(color: Colors.white))
+                            ],
+                          )
+                        ],
+                      )),
+                  //listView Items
+                  Positioned(
+                      right: 0,
+                      top: 80,
+                      child: SizedBox(
+                        width: 90,
+                        height: double.maxFinite,
+                        child: ListView.builder(
+                          itemCount: _travelItems.length,
+                          itemBuilder: (context, index) {
+                            return imageItem(index);
+                          },
+                        ),
+                      ))
+                ],
+              ),
             ),
-          ),
-          //part 2
-          Expanded(
-            child: Container(
+            //part 2
+            Container(
               width: double.infinity,
               color: Colors.white,
               child: Column(children: [
@@ -202,7 +202,8 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               const Text("Rating"),
-                              Text("${_travelItems[_selcetedIndex].getRating}")
+                              Text(
+                                  "${_travelItems[_selcetedIndex].getRating}")
                             ],
                           )),
                     ),
@@ -258,9 +259,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                   ),
                 )
               ]),
-            ),
-          )
-        ]),
+            )
+          ]),
+        ),
       ),
     );
   }
