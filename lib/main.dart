@@ -156,13 +156,13 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(_travelItems[_selcetedIndex].getTitle!,
-                              style: TextStyle(color: Colors.white)),
+                              style: Theme.of(context).textTheme.headlineLarge),
                           Row(
                             children: [
-                              Icon(CupertinoIcons.location_fill,
+                             const  Icon(CupertinoIcons.placemark_fill,
                                   color: Colors.white),
                               Text(_travelItems[_selcetedIndex].getLocation!,
-                                  style: TextStyle(color: Colors.white))
+                                  style: Theme.of(context).textTheme.bodyMedium)
                             ],
                           )
                         ],
@@ -214,9 +214,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              const Text("Distance"),
+                              Text("Distance", style: Theme.of(context).textTheme.headlineSmall,),
                               Text(
-                                  "${_travelItems[_selcetedIndex].getDistance}km")
+                                  "${_travelItems[_selcetedIndex].getDistance}km", style: Theme.of(context).textTheme.displayMedium,)
                             ],
                           )),
                     ),
@@ -231,9 +231,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              const Text("Temp"),
+                              Text("Temp",style: Theme.of(context).textTheme.headlineSmall,),
                               Text(
-                                  "${_travelItems[_selcetedIndex].getTemp}\u2103")
+                                  "${_travelItems[_selcetedIndex].getTemp}\u2103", style: Theme.of(context).textTheme.displayMedium,)
                             ],
                           )),
                     ),
@@ -248,9 +248,9 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              const Text("Rating"),
+                              Text("Rating", style: Theme.of(context).textTheme.headlineSmall,),
                               Text(
-                                  "${_travelItems[_selcetedIndex].getRating}")
+                                  "${_travelItems[_selcetedIndex].getRating}", style: Theme.of(context).textTheme.displayMedium,)
                             ],
                           )),
                     ),
@@ -262,13 +262,14 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("Description"),
+                      Text("Description", style: Theme.of(context).textTheme.headlineMedium,),
                       const SizedBox(height: 8),
                       ExpandableText(
                         "${_travelItems[_selcetedIndex].getDescription}",
                         expandText: "Read More",
                         collapseText: "Show Less",
                         maxLines: 3,
+                        style: Theme.of(context).textTheme.bodySmall,
                       )
                     ],
                   ),
@@ -283,11 +284,11 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text("Total Price"),
+                          Text("Total Price", style: Theme.of(context).textTheme.bodyMedium),
                           const SizedBox(
                             height: 8,
                           ),
-                          Text("\$${_travelItems[_selcetedIndex].getPrice}")
+                          Text("\$${_travelItems[_selcetedIndex].getPrice}",style: Theme.of(context).textTheme.bodyLarge,)
                         ],
                       ),
                       //button
