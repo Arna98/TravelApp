@@ -12,8 +12,54 @@ void main() {
 class TravelInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          headlineLarge: TextStyle(
+            color: Colors.white,
+            fontSize: 70,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w300
+          ),
+          headlineMedium: TextStyle(
+            color: Colors.black,
+            fontSize: 40,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w500
+          ),
+          headlineSmall: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w300
+          ) ,
+          bodyLarge: TextStyle(
+            color: Colors.black,
+            fontSize: 80,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w700
+          ),
+          bodyMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 36,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w300
+          ),
+          bodySmall: TextStyle(
+            color: Colors.black,
+            fontSize: 27,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w300
+          ),
+          displayMedium: TextStyle(
+            color: Color.fromARGB(255, 120, 202, 222),
+            fontSize: 50,
+            fontFamily: "poppins",
+            fontWeight: FontWeight.w500
+          )
+        )
+      ),
       home: TravelInfoHome(),
     );
   }
