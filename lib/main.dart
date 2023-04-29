@@ -216,7 +216,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                             children: [
                               Text("Distance", style: Theme.of(context).textTheme.headlineSmall,),
                               Text(
-                                  "${_travelItems[_selcetedIndex].getDistance}km", style: Theme.of(context).textTheme.displayMedium,)
+                                  "${_travelItems[_selcetedIndex].getDistance!.toInt()}km", style: Theme.of(context).textTheme.displayMedium,)
                             ],
                           )),
                     ),
@@ -233,7 +233,7 @@ class _TravelInfoHomeState extends State<TravelInfoHome> {
                             children: [
                               Text("Temp",style: Theme.of(context).textTheme.headlineSmall,),
                               Text(
-                                  "${_travelItems[_selcetedIndex].getTemp}\u2103", style: Theme.of(context).textTheme.displayMedium,)
+                                  "${_travelItems[_selcetedIndex].getTemp!.toInt()}\u2103", style: Theme.of(context).textTheme.displayMedium,)
                             ],
                           )),
                     ),
